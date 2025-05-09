@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import requests
 import hashlib
 import time
 
 app = Flask(__name__)
+CORS(app, origins=["https://esperandoatendimento.netlify.app"])  # Libera requisições do seu site
 
 ACCESS_TOKEN = 'EAAIFsqIgjhoBOZBwSUlhZBu6ZCgHY0FZBJIkwD4CylnNZBZCzhDfjh1ii2VoXRn6BKQt42VKpKS6zM7XzdZCf6KZBH7NCd7lqlLugkb8aItWHayfmGXRmAjgucVODKJ7iplwIHsNvbNkFNQX7IGhAP3ZBORO7Yz70sQEuC7HtXCxmI2BSneyhv5hOIQ9catgAY6F9FQZDZD'
 PIXEL_ID = '1799701637171612'
